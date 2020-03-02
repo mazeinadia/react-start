@@ -1,9 +1,12 @@
 import React from 'react';
 import Layout from './layouts/default';
+import CheckBox from './components/CheckBox';
 
 function App() {
   return (
-      <Layout>Hi</Layout>
+      <Layout>
+        <CheckBox />
+      </Layout>
   );
 }
 
