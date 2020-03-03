@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { ReactChild } from 'react';
 import * as UI from './styles';
+import { CheckBoxProps } from "../../containers/CheckBox";
 
-const Layout = () => {
-    const [checked, setIsChecked] = useState(false);
+const CheckBox = (props: CheckBoxProps): ReactChild => {
+    const { checked, toggle } = props;
 
     return (
-        <UI.Box onClick={() => setIsChecked(!checked)}>
+        <UI.Box onClick={toggle}>
             {checked && <UI.Check>✓</UI.Check>}
         </UI.Box>
     );
 };
 
-export default Layout;
+export default CheckBox;
